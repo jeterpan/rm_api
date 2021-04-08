@@ -7,6 +7,7 @@ COPY controllers/* /myapp/controllers/
 COPY models/* /myapp/models/
 COPY package.json /myapp
 COPY services/* /myapp/services/
+COPY app.js /myapp
 
 RUN npm install pm2 -g
 
