@@ -1,4 +1,4 @@
-FROM node_infra
+FROM jetercosta/node_infra
 
 WORKDIR /myapp
 RUN mkdir -p /myapp/configs /myapp/controllers /myapp/models /myapp/services
