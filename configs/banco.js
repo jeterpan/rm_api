@@ -1,7 +1,8 @@
 require('dotenv').config()
 
 module.exports = {
-    XMLpool: {
+    schema_rm: process.env.ORACLE_SCHEMA_RM || 'RM'
+    , XMLpool: {
         bd_version: process.env.ORACLE_VERSION || 12,
         user: process.env.ORACLE_USER,
         password: process.env.ORACLE_PASSWORD,

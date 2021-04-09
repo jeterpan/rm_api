@@ -27,10 +27,10 @@ SELECT
 const sqlFrom = 
 `\n
 FROM
-    pfunc    a,
-    ppessoa  b,
-    psecao   c,
-    pfuncao  d
+    ${configOracleDB.schema_rm}.pfunc    a,
+    ${configOracleDB.schema_rm}.ppessoa  b,
+    ${configOracleDB.schema_rm}.psecao   c,
+    ${configOracleDB.schema_rm}.pfuncao  d
 `
 
 const sqlWhere = 

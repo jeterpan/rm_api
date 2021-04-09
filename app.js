@@ -9,6 +9,9 @@ process.env.UV_THREADPOOL_SIZE = configBanco.XMLpool.poolMax + defaultThreadPool
 
 async function inicia() {
     console.log('Iniciando aplicação...')
+    console.log(`ORACLE_VERSION=${configBanco.XMLpool.bd_version}`)
+    console.log(`ORACLE_CONNECTIONSTRING=${configBanco.XMLpool.connectString}`)
+    console.log(`ORACLE_USER=${configBanco.XMLpool.user}`)
 
     try {
         //console.log(configBanco.SATpool.user)
@@ -23,6 +26,7 @@ async function inicia() {
 
     try { 
         console.log('Inicializando módulo: Servidor Web...')
+        //console.log(`ORACLE_VERSION=${configBanco.XMLpool.bd_version}`)
 
         await servidorWeb.inicializa()
     } catch (err) {
