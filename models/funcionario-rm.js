@@ -149,7 +149,7 @@ async function consulta(contexto) {
     // Monta a declaração SQL
 
     // Compatibilidade com Oracle 11
-    if(configOracleDB.XMLpool.bd_version === 11) {
+    if(configOracleDB.XMLpool.bd_version == 11) {
         declaracaoSQL += sqlSubConsultas + `\n consulta_principal as ( ${consultaPrincipal} )` + sqlSubConsultaNumerar + sqlOffSet
     } else {
         declaracaoSQL += consultaPrincipal
@@ -161,7 +161,7 @@ async function consulta(contexto) {
 
     binds.row_limit = limite
 
-    if(configOracleDB.XMLpool.bd_version === 11) {
+    if(configOracleDB.XMLpool.bd_version == 11) {
         // Compatibilidade com Oracle 11
         declaracaoSQL += sqlRownum
     } else {
